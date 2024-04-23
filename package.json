@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Study project tab news clone",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:node": "node --test",
+    "test:node:watch": "node --test --watch"
   },
   "author": "gustavovs88",
   "license": "MIT",
