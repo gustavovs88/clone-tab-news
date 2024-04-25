@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "target": "ES6",
+    "paths": {
+      "#api/*": ["pages/api/*"],
+      "#tests/*": ["tests/*"],
+      "#infra/*": ["infra/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
