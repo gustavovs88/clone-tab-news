@@ -1,11 +1,20 @@
 {
   "name": "clone-tab-news",
+  "imports": {
+    "#*": "./*",
+    "#api/*": "./pages/api/*",
+    "#tests/*": "./tests/*",
+    "#infra/*": "./infra/*"
+  },
   "version": "1.0.0",
   "description": "Study project tab news clone",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
+    "services:up": "docker compose --file infra/compose.yaml up --detach",
+    "services:down": "docker compose --file infra/compose.yaml down",
+    "services:stop": "docker compose --file infra/compose.yaml stop",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
